@@ -26,7 +26,7 @@ import javax.swing.*;
  * @Description
  * @Date 2020/3/18 10:30
  */
-public class Setting {
+public class Windows {
 
     private JCheckBox checkBox;
     private JPanel windows;

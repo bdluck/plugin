@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>com.tbc.hsx.plugin.</id>
+  <id>top.jlpan</id>
   <name>name</name>
   <version>1.0</version>
   <vendor email="18723083600@163.com" url="http://www.jlpan.top">jlpan</vendor>
@@ -10,12 +10,14 @@
   <change-notes>一个生成代码的插件一个生成代码的插件一个生成代码的插件一个生成代码的插件
     一个生成代码的插件一个生成代码的插件一个生成代码的插件</change-notes>
 
-  <idea-version since-build="131"/>
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
     <applicationService serviceInterface="top.jlpan.Hello" serviceImplementation="top.jlpan.impl.HelloImpl"/>
-    <applicationConfigurable instance="top.jlpan.Config" />
+    <applicationService serviceImplementation="top.jlpan.plugin.PersistentProperties"/>
+    <applicationConfigurable instance="top.jlpan.plugin.SearchableSetting" />
   </extensions>
 
   <application-components>
