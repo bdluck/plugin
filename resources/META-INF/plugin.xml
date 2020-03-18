@@ -1,0 +1,39 @@
+<idea-plugin>
+  <id>com.tbc.hsx.plugin.</id>
+  <name>name</name>
+  <version>1.0</version>
+  <vendor email="18723083600@163.com" url="http://www.jlpan.top">jlpan</vendor>
+
+  <description>一个生成代码的插件一个生成代码的插件一个生成代码的插件一个生成代码的插件
+    一个生成代码的插件一个生成代码的插件一个生成代码的插件</description>
+
+  <change-notes>一个生成代码的插件一个生成代码的插件一个生成代码的插件一个生成代码的插件
+    一个生成代码的插件一个生成代码的插件一个生成代码的插件</change-notes>
+
+  <idea-version since-build="131"/>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <applicationService serviceInterface="top.jlpan.Hello" serviceImplementation="top.jlpan.impl.HelloImpl"/>
+    <applicationConfigurable instance="top.jlpan.Config" />
+  </extensions>
+
+  <application-components>
+    <!-- Application 所有运行的IDE使用一个插件实例； -->
+  </application-components>
+
+  <project-components>
+    <!-- Project 每个打开的IDE有一份独立的插件实例； -->
+  </project-components>
+
+  <module-components>
+    <!-- Module 工程中的每个Module有一份独立的实例。 -->
+  </module-components>
+
+  <actions>
+    <action id="top.jlpan" class="top.jlpan.TestAction" text="测试action" description="测试action描述">
+      <add-to-group group-id="BuildMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>
